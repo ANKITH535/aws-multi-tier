@@ -12,6 +12,7 @@ balancing, auto scaling, database services, monitoring, identity and
 access management, and cloud security.
 
 ## Architecture
+![AWS Multi-Tier Architecture](docs/architecture.png)
 
 ``` text
                     Internet
