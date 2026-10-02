@@ -4,16 +4,14 @@
 
 ## Project Overview
 
-This project demonstrates the design and deployment of a multi-tier web
-application on Amazon Web Services (AWS).
+This project demonstrates the design and hands-on deployment of a
+multi-tier web application on Amazon Web Services (AWS).
 
-The environment was built as a hands-on cloud project to practice AWS
-networking, compute, load balancing, auto scaling, database services,
-storage, monitoring, and access management.
+The project was built to practice AWS networking, compute, load
+balancing, auto scaling, database services, monitoring, identity and
+access management, and cloud security.
 
 ## Architecture
-
-The application follows a multi-tier architecture:
 
 ``` text
                     Internet
@@ -32,8 +30,8 @@ The application follows a multi-tier architecture:
                     RDS Database
 ```
 
-The infrastructure was organized using an Amazon VPC with public and
-private networking components.
+The infrastructure used an Amazon VPC with public and private subnets
+and separated application and database tiers.
 
 ## AWS Services Used
 
@@ -41,33 +39,30 @@ private networking components.
 -   Subnets
 -   Route Tables
 -   Internet Gateway
+-   NAT Gateway
 -   Security Groups
 -   Amazon EC2
 -   Application Load Balancer (ALB)
 -   Target Groups
 -   Auto Scaling Group (ASG)
 -   Amazon RDS
--   Amazon S3
 -   AWS IAM
 -   Amazon CloudWatch
--   Amazon Route 53 (where configured)
 
 ## Key Implementation Areas
 
 ### 1. Networking
 
 A dedicated VPC was used to organize the cloud environment. Subnets,
-route tables, and security groups were configured to control
-connectivity between the application and database tiers.
+route tables, Internet Gateway, NAT Gateway, and security groups were
+configured to control connectivity between the required tiers.
 
 ### 2. Application Load Balancer
 
 An Application Load Balancer was configured to receive application
-traffic and forward requests to the EC2 instances through a target
-group.
+traffic and forward requests to EC2 instances through a target group.
 
-Health checks were used to verify the availability of the application
-instances.
+Health checks were used to verify application instance availability.
 
 ### 3. EC2 and Auto Scaling
 
@@ -80,35 +75,26 @@ instances when necessary.
 Amazon RDS was used for the database tier. The database was kept
 separate from the public application-facing components.
 
-### 5. Storage
+### 5. Identity and Access Management
 
-Amazon S3 was used for cloud object storage as part of the project.
+AWS IAM was used for access and permissions management.
 
-### 6. Identity and Access Management
+### 6. Monitoring
 
-AWS IAM was used to manage permissions and access to AWS resources.
-
-### 7. Monitoring
-
-Amazon CloudWatch was used for monitoring and alarms, including
-EC2-related metrics.
-
-### 8. DNS
-
-Route 53 was studied/configured as part of the project for DNS
-management where applicable.
+Amazon CloudWatch was used for monitoring EC2 metrics and configuring
+alarms.
 
 ## Testing
 
 The project included testing the application through the load balancer,
-checking target health, verifying EC2 instances, testing Auto Scaling
-behavior, and checking connectivity between the required AWS components.
+checking target health, verifying EC2 instances, and testing Auto
+Scaling behavior.
 
 ## Project Completion
 
 The AWS environment was tested and the project was completed
-successfully. After completing the hands-on work, the temporary AWS
-resources were deleted to avoid unnecessary ongoing charges.
+successfully. After completing the hands-on work, the AWS resources were
+deleted to avoid unnecessary ongoing charges.
 
 ## Skills Demonstrated
 
@@ -118,16 +104,14 @@ resources were deleted to avoid unnecessary ongoing charges.
 -   Application Load Balancing
 -   Auto Scaling
 -   RDS
--   S3
 -   IAM
 -   CloudWatch
--   Route 53
 -   Security Groups
 -   High-availability concepts
 -   Cloud troubleshooting
 
 ## Note
 
-This repository contains project documentation and learning material for
-the AWS implementation. AWS resources used during the hands-on lab were
+This repository contains documentation for the AWS project. The
+temporary AWS resources used during the hands-on implementation were
 removed after completion.
