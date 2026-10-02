@@ -13,6 +13,17 @@ access management, and cloud security.
 
 ## Architecture
 ![AWS Multi-Tier Architecture](docs/architecture.png)
+## Project Structure
+
+```text
+aws-multi-tier/
+│
+├── README.md
+│
+├── STUDENT_ASSIGNMENT.md
+│
+└── docs/
+    └── architecture.png
 
 ``` text
                     Internet
